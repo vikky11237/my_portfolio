@@ -13,3 +13,7 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 # Update SECRET_KEY
 SECRET_KEY = os.getenv('SECRET_KEY', 'your-default-secret-key-for-dev')
+
+# Media files configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
