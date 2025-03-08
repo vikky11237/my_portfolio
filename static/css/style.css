@@ -1,0 +1,34 @@
+/* Custom animations */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Custom utility classes */
+.text-gradient {
+    background: linear-gradient(90deg, #3182ce, #2c5282);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom components */
+.skill-bar {
+    transition: width 1s ease-in-out;
+}
+
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom form styles */
+.form-input:focus {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}

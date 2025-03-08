@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Home - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+        <div class="mb-8">
+            <img src="{% static 'images/profile.jpg' %}" alt="Gaurav Yadav" 
+                class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-blue-500 shadow-lg">
+        </div>
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Gaurav Yadav</h1>
+        <p class="text-xl text-gray-600">AWS Data Engineer | Big Data Expert | Cloud Solutions Architect</p>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pl-8">
+                <h2 class="text-2xl font-bold mb-4">About Me</h2>
+                <p class="text-gray-600 mb-6">
+                    Experienced Data Engineer with 7+ years of expertise in designing and building scalable data pipelines, 
+                    ETL workflows, and cloud-based architectures. Proficient in AWS services, Big Data technologies, 
+                    and SQL/NoSQL databases.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="{% url 'projects' %}" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+                        View Projects
+                    </a>
+                    <a href="{% url 'contact' %}" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}About - My Portfolio{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-gray-800 mb-8">About Me</h1>
+    
+    <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+        <h2 class="text-2xl font-bold mb-4">Education & Experience</h2>
+        <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-2">Education</h3>
+            <p class="text-gray-600">Bachelor's of Engineering in  Computer Science</p>
+            <p class="text-gray-500">RGPV Bhopal, 2012-2016</p>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-xl font-semibold mb-2">Work Experience</h3>
+        
+            <!-- Airbus Experience -->
+            <div class="mb-6">
+                <h4 class="text-lg font-semibold text-gray-800">AWS Data Engineer</h4>
+                <p class="text-gray-600">Airbus Group India Pvt Ltd, Bangalore</p>
+                <p class="text-gray-500 mb-2">2022 - Present</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                    <li>Designed & deployed serverless data pipelines using AWS Glue, Lambda, and Step Functions, reducing manual ETL efforts by 60%</li>
+                    <li>Optimized Amazon Redshift queries, improving performance by 40% and reducing cost by 30%</li>
+                    <li>Built event-driven data processing pipelines with AWS SQS, SNS, and Kinesis</li>
+                    <li>Automated data lake ingestion using AWS Glue & Athena, reducing query execution time by 50%</li>
+                    <li>Developed and deployed AWS EMR-based Spark jobs, improving data processing efficiency by 35%</li>
+                </ul>
+            </div>
+        
+            <!-- IBM Experience -->
+            <div class="mb-6">
+                <h4 class="text-lg font-semibold text-gray-800">Big Data & AWS Engineer</h4>
+                <p class="text-gray-600">IBM India Pvt Ltd, Bangalore</p>
+                <p class="text-gray-500 mb-2">2017 - 2022</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                    <li>Migrated terabytes of on-prem data to AWS S3 & Redshift, reducing infrastructure costs by 40%</li>
+                    <li>Developed high-performance Spark-based ETL jobs on AWS Glue & EMR</li>
+                    <li>Automated data pipeline monitoring & alerting using AWS CloudWatch, SNS, and Lambda</li>
+                    <li>Integrated Apache Kafka with AWS Kinesis for real-time event streaming</li>
+                    <li>Led data governance initiatives, implementing AWS KMS and IAM policies</li>
+                </ul>
+            </div>
+        
+            <!-- L&T Experience -->
+            <div class="mb-6">
+                <h4 class="text-lg font-semibold text-gray-800">Software Engineer</h4>
+                <p class="text-gray-600">Larsen & Toubro Infotech, Chennai</p>
+                <p class="text-gray-500 mb-2">2016 - 2017</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                    <li>Developed and maintained data integration solutions</li>
+                    <li>Collaborated with cross-functional teams to implement ETL processes</li>
+                    <li>Participated in code reviews and technical documentation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-2xl font-bold mb-8">Technical Skills</h2>
+        
+        <!-- Cloud & AWS -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Cloud & AWS</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {% for skill in cloud_skills %}
+                <div class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <span class="text-gray-700">{{ skill }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <!-- Big Data & Streaming -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Big Data & Streaming</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {% for skill in big_data_skills %}
+                <div class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <span class="text-gray-700">{{ skill }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <!-- Programming & Tools -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Programming & Tools</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {% for skill in programming_skills %}
+                <div class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <span class="text-gray-700">{{ skill }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <!-- Databases & Analytics -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Databases & Analytics</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {% for skill in database_skills %}
+                <div class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <span class="text-gray-700">{{ skill }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <!-- Core Competencies -->
+        <div class="mb-8">
+            <h3 class="text-xl font-semibold mb-4">Core Competencies</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {% for skill in core_skills %}
+                <div class="bg-gray-50 p-4 rounded-lg text-center hover:shadow-md transition-shadow">
+                    <span class="text-gray-700">{{ skill }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
